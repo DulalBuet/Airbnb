@@ -1,14 +1,16 @@
 function Navbar() {
   return (
-    <nav>
-      <h1>Airbnb</h1>
+    <header className="navbar">
+      <div className="navbar__logo">
+        Airbnb
+      </div>
 
-      <div>
+      <nav className="navbar__links">
         <button>Airbnb your home</button>
         <button>Log in</button>
         <button>Sign up</button>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }
 
