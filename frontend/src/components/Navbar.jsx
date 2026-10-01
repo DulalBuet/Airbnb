@@ -1,14 +1,18 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <header className="navbar">
-      <div className="navbar__logo">
+      <Link to="/" className="navbar__logo">
         Airbnb
-      </div>
+      </Link>
 
       <nav className="navbar__links">
         <button>Airbnb your home</button>
-        <button>Log in</button>
-        <button>Sign up</button>
+
+        <Link to="/login">Log in</Link>
+
+        <Link to="/signup">Sign up</Link>
       </nav>
     </header>
   );
