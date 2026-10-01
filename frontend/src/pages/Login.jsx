@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   validateEmail,
@@ -6,6 +7,7 @@ import {
 } from "../utils/validation";
 
 function Login() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -31,6 +33,7 @@ function Login() {
 
     console.log("Email:", email);
     console.log("Password:", password);
+    navigate("/");
   }
 
   return (
@@ -72,6 +75,10 @@ function Login() {
           <button type="submit" className="auth-button">
             Log in
           </button>
+          <p>
+            Don't have an account?{" "}
+            <Link to="/signup">Sign up</Link>
+          </p>
         </form>
       </div>
     </main>

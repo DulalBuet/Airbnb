@@ -8,7 +8,7 @@ function Navbar() {
       </Link>
 
       <nav className="navbar__links">
-        <button>Airbnb your home</button>
+        <Link to="/host">Airbnb your home</Link>
 
         <Link to="/login">Log in</Link>
 
